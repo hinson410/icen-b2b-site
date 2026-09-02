@@ -129,3 +129,48 @@
     year.textContent = new Date().getFullYear();
   }
 })();
+
+/* ---------- Hero product slider ---------- */
+(function () {
+  "use strict";
+  var slider = document.querySelector(".hero-slider");
+  if (!slider) return;
+  var track = slider.querySelector(".slider-track");
+  var slides = slider.querySelectorAll(".slider-slide");
+  if (!track || slides.length < 2) return;
+  var dotsWrap = slider.querySelector(".slider-dots");
+  var index = 0;
+  var timer = null;
+
+  for (var i = 0; i < slides.length; i++) {
+    var d = document.createElement("button");
+    d.type = "button";
+    d.setAttribute("aria-label", "Go to slide " + (i + 1));
+    if (i === 0) d.classList.add("active");
+    d.addEventListener("click", (function (n) {
+      return function () { go(n); restart(); };
+    })(i));
+    dotsWrap.appendChild(d);
+  }
+  var dots = dotsWrap.querySelectorAll("button");
+
+  function go(n) {
+    index = (n + slides.length) % slides.length;
+    track.style.transform = "translateX(-" + index * 100 + "%)";
+    dots.forEach(function (dot, i) {
+      dot.classList.toggle("active", i === index);
+    });
+  }
+  function next() { go(index + 1); }
+  function restart() {
+    if (timer) clearInterval(timer);
+    timer = setInterval(next, 4500);
+  }
+  var prevBtn = slider.querySelector(".prev");
+  var nextBtn = slider.querySelector(".next");
+  if (prevBtn) prevBtn.addEventListener("click", function () { go(index - 1); restart(); });
+  if (nextBtn) nextBtn.addEventListener("click", function () { next(); restart(); });
+  slider.addEventListener("mouseenter", function () { if (timer) clearInterval(timer); });
+  slider.addEventListener("mouseleave", restart);
+  restart();
+})();
