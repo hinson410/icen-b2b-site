@@ -228,5 +228,43 @@
 </footer>
 
 <script src="js/main.js"></script>
+
+
+<script src="js/main.js"></script>
+<!-- WhatsApp悬浮按钮 开始 -->
+<style>
+.whatsapp-float{
+    position:fixed;
+    right:20px;
+    bottom:25px;
+    z-index:9999;
+    width:56px;
+    height:56px;
+    background-color:#25D366;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 2px 12px rgba(0,0,0,0.2);
+    transition:0.2s ease;
+}
+.whatsapp-float:hover{
+    transform:scale(1.08);
+}
+.whatsapp-float svg{
+    width:28px;
+    height:28px;
+    fill:#ffffff;
+}
+</style>
+
+<a class="whatsapp-float" target="_blank" rel="noopener noreferrer"
+href="https://wa.me/8618702023430?text=Hello%20I%20inquire%20about%20medical%20equipment%20quotation">
+    <svg viewBox="0 0 24 24">
+        <use href="#i-chat"></use>
+    </svg>
+</a>
+<!-- WhatsApp悬浮按钮 结束 -->
+
 </body>
 </html>
