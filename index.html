@@ -13,6 +13,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/video.css">
 </head>
 <body>
 
@@ -474,6 +475,9 @@
     </div>
   </section>
 
+
+<section class="video-section" id="videos"><div class="video-shell"><div class="video-head"><div><span class="eyebrow">Video</span><h2>See ICEN in Action</h2><p>Explore product demonstrations, technology, manufacturing and healthcare solutions through video. Real video links can be connected to each card as content becomes available.</p></div><a class="btn btn-outline" href="video-center.html">View Video Center</a></div><div class="video-grid"><article class="video-card featured"><div class="video-thumb placeholder"><button class="video-play" type="button" data-video-title="ICEN Medical Equipment Overview" data-video-url="" aria-label="Play ICEN Medical Equipment Overview"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></div><div class="video-body"><span class="video-type">Featured</span><h3>ICEN Medical Equipment Overview</h3><p>A premium space for your flagship brand, product portfolio or company introduction video.</p><a class="video-link" href="video-center.html">Explore all videos →</a></div></article><article class="video-card"><div class="video-thumb placeholder"><button class="video-play" type="button" data-video-title="Product Demonstrations" data-video-url="" aria-label="Play Product Demonstrations"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></div><div class="video-body"><span class="video-type">Product</span><h3>Product Demonstrations</h3><p>Show how key products work and highlight the details buyers need to see.</p></div></article><article class="video-card"><div class="video-thumb placeholder"><button class="video-play" type="button" data-video-title="Factory & Quality" data-video-url="" aria-label="Play Factory & Quality"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></div><div class="video-body"><span class="video-type">Company</span><h3>Factory &amp; Quality</h3><p>Use real factory footage to strengthen trust with distributors and hospital buyers.</p></div></article></div><div class="video-category"><div><h3>Technology in Motion</h3><p>Build a video library around products, applications, factory, quality and OEM / ODM.</p></div><a class="btn btn-white" href="video-center.html">Explore Video Center</a></div></div></section>
+
   <!-- ===== Why ICEN ===== -->
   <section class="section" id="why-us">
     <div class="container">
@@ -582,6 +586,7 @@
 </footer>
 
 <script src="js/main.js"></script>
+<script src="js/video.js"></script>
 <!-- WhatsApp float button start -->
 <style>
 .whatsapp-float{
@@ -617,5 +622,5 @@ href="https://wa.me/8618702023430?text=Hello%20I%20inquire%20about%20medical%20e
 </a>
 <!-- WhatsApp float button end -->
 
-</body>
+<div class="video-modal" id="icen-video-modal" aria-hidden="true"><div class="video-modal-inner" role="dialog" aria-modal="true" aria-label="ICEN video player"><div class="video-modal-top"><span class="video-modal-title">ICEN Video</span><button class="video-close" type="button" onclick="ICENVideo.close()" aria-label="Close video">×</button></div><div class="video-frame"></div></div></div></body>
 </html>
