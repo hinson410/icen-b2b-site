@@ -527,3 +527,5 @@ h1, h2, h3, h4 { color: var(--navy); line-height: 1.22; font-weight: 700; }
   .company-collage img { height: 420px; }
   .proof-card img { height: 320px; }
 }
+
+.footer-contact li a { white-space: nowrap; }
