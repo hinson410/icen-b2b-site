@@ -81,7 +81,7 @@
     });
   });
 
-  /* ---------- Contact form (Formspree AJAX) ---------- */
+  /* ---------- Contact form (Formspree AJAX + WhatsApp redirect) ---------- */
   var form = document.getElementById("inquiry-form");
   if (form) {
     var submitBtn = form.querySelector('button[type="submit"]');
@@ -127,15 +127,13 @@
       })
         .then(function (res) {
           if (!res.ok) throw new Error("Formspree HTTP " + res.status);
-          form.reset();
-          if (success) {
-            success.style.display = "block";
-            success.scrollIntoView({ behavior: "smooth", block: "nearest" });
-          }
-          if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = sendingLabel; }
-          setTimeout(function () {
-            if (success) success.style.display = "none";
-          }, 9000);
+          var waText = "Hello ICEN Medical, I just submitted an inquiry on your website.";
+          if (payload.name) waText += " Name: " + payload.name;
+          if (payload.company) waText += " | Company: " + payload.company;
+          if (payload.country) waText += " | Country: " + payload.country;
+          if (payload.product) waText += " | Product: " + payload.product;
+          if (payload.message) waText += " | Message: " + payload.message;
+          window.location.href = "https://wa.me/8618702023430?text=" + encodeURIComponent(waText);
         })
         .catch(function () {
           if (errorBox) {
