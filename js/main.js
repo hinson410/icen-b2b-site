@@ -174,3 +174,17 @@
   slider.addEventListener("mouseleave", restart);
   restart();
 })();
+
+/* ICEN V5 product search */
+document.addEventListener('DOMContentLoaded', function(){
+  var input=document.getElementById('product-search');
+  if(!input) return;
+  var cards=[].slice.call(document.querySelectorAll('.prod-card'));
+  input.addEventListener('input',function(){
+    var q=this.value.trim().toLowerCase();
+    cards.forEach(function(card){
+      var text=card.innerText.toLowerCase();
+      card.style.display=!q || text.indexOf(q)!==-1 ? '' : 'none';
+    });
+  });
+});

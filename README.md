@@ -1,48 +1,32 @@
-# ICEN Medical Equipment Limited — B2B Export Website
+# ICEN Medical Equipment Limited — Company Website (Current)
 
-A fully static, English-language marketing website for **ICEN Medical Equipment Limited**, a medical device manufacturer and exporter. Built as a responsive multi-page site with no build step — open `index.html` in any browser or host it on any static server.
+Updated: 2026-09-09
 
-## Pages
+## Site structure (single-level static pages)
+- index.html — Homepage (company intro video, product categories, featured items, one-stop solution)
+- products.html — Full Mindray catalog (72 cards, verified product videos, category anchors)
+- video-center.html — Product video center
+- oem-odm.html — OEM / ODM services
+- quality-compliance.html — Quality & compliance support
+- resources.html — Buying guides & resources hub
+- about.html — Company profile (founded 2015, team, proof photos)
+- contact.html — Contact & inquiry form
+- product-detail.html — Product detail page prototype (excluded from search: see robots.txt)
 
-| Page | Description |
-| --- | --- |
-| `index.html` | Home: hero, trust bar, product categories, featured products, why-us, statistics, CTA |
-| `products.html` | Full catalog: 8 models across 6 categories with specifications |
-| `about.html` | Company profile, mission, quality & compliance, OEM/ODM, milestones |
-| `contact.html` | Inquiry form, contact details, FAQ |
-
-## Structure
-
-```
-icen-b2b-site/
-├── index.html          # Home page
-├── products.html       # Product catalog
-├── about.html          # About page
-├── contact.html        # Contact / inquiry page
-├── robots.txt
-├── css/
-│   └── style.css       # Shared design system (responsive)
-├── js/
-│   └── main.js         # Nav, reveal, FAQ, form handling
-└── assets/
-    ├── icen-logo.png   # ICEN brand logo (transparent PNG)
-    └── img/            # Hero + product images
-```
-
-## Customization Notes
-
-Before production use, replace the **sample content** with verified company data:
-
-- Contact details in the footer and contact page (email, phone, address) are placeholders.
-- Company statistics and milestone years on the home/about pages are sample figures.
-- Certification claims (ISO 13485, CE, RoHS) and product specifications should be reviewed against the real product documentation and quality files.
-- Product model numbers (ICEN-BP200, etc.) are sample SKUs.
-- The contact form is a front-end demo — connect it to your CRM, email service or backend endpoint (`js/main.js` → `#inquiry-form` handler).
+## Content notes
+- Contact email used across the site: icen001@icenteco.com
+- Office land line: +86-020-37759153 (shown as +86 020 3775 9153)
+- Head office address: Room 1606-1607, Building B, Xinghe Dongyuehui, Huangge Town,
+  Nansha District, Guangzhou City, China
+- Company figures: founded 2015, 15 sales staff, 150+ countries served, 16+ years combined expertise
+- Product images: official Mindray product renders / supplier-provided official photos
+- Company video: videos/icen-company-2026-06.mp4 (<25 MiB for Cloudflare Pages)
 
 ## Deployment
+Upload the whole folder to the web root (GitHub Pages + Cloudflare Pages / icenmedical.com).
+Keep `assets/img/`, `assets/company/`, `css/`, `js/`, `videos/` intact.
 
-This repository is deployed with GitHub Pages from the `main` branch, root directory.
-
-```
-https://<owner>.github.io/<repository>/
-```
+## Important
+- Connect the Contact form to Formspree before production use.
+- Verify all company, certification and country-specific claims before publishing.
+- Submit /sitemap.xml to Google Search Console and Bing Webmaster Tools.
