@@ -81,14 +81,19 @@
     });
   });
 
-  /* ---------- Contact form (front-end demo handler) ---------- */
+  /* ---------- Contact form (Formspree AJAX) ---------- */
   var form = document.getElementById("inquiry-form");
   if (form) {
+    var submitBtn = form.querySelector('button[type="submit"]');
+    var success = document.getElementById("form-success");
+    var errorBox = document.getElementById("form-error");
+    var sendingLabel = null;
+
     form.addEventListener("submit", function (e) {
       e.preventDefault();
-      var required = form.querySelectorAll("[required]");
+
       var valid = true;
-      required.forEach(function (field) {
+      form.querySelectorAll("[required]").forEach(function (field) {
         if (!field.value.trim()) {
           valid = false;
           field.style.borderColor = "#d64545";
@@ -103,15 +108,42 @@
       }
       if (!valid) return;
 
-      var success = document.getElementById("form-success");
-      if (success) {
-        success.style.display = "block";
-        success.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      if (success) success.style.display = "none";
+      if (errorBox) errorBox.style.display = "none";
+
+      if (submitBtn) {
+        sendingLabel = submitBtn.textContent;
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Sending\u2026";
       }
-      form.reset();
-      setTimeout(function () {
-        if (success) success.style.display = "none";
-      }, 9000);
+
+      var payload = {};
+      new FormData(form).forEach(function (value, key) { payload[key] = value; });
+
+      fetch("https://formspree.io/f/mzebkqzd", {
+        method: "POST",
+        body: JSON.stringify(payload),
+        headers: { "Content-Type": "application/json", "Accept": "application/json" }
+      })
+        .then(function (res) {
+          if (!res.ok) throw new Error("Formspree HTTP " + res.status);
+          form.reset();
+          if (success) {
+            success.style.display = "block";
+            success.scrollIntoView({ behavior: "smooth", block: "nearest" });
+          }
+          if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = sendingLabel; }
+          setTimeout(function () {
+            if (success) success.style.display = "none";
+          }, 9000);
+        })
+        .catch(function () {
+          if (errorBox) {
+            errorBox.style.display = "block";
+            errorBox.scrollIntoView({ behavior: "smooth", block: "nearest" });
+          }
+          if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = sendingLabel; }
+        });
     });
   }
 

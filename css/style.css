@@ -323,6 +323,12 @@ h1, h2, h3, h4 { color: var(--navy); line-height: 1.22; font-weight: 700; }
   display: none; margin-top: 18px; padding: 16px 18px; border-radius: 12px;
   background: rgba(31,169,124,.1); border: 1px solid rgba(31,169,124,.35); color: #0e7a57; font-weight: 600; font-size: 15px;
 }
+.form-error {
+  display: none; margin-top: 18px; padding: 14px 18px; border-radius: 12px;
+  background: rgba(214,69,69,.1); border: 1px solid rgba(214,69,69,.35);
+  color: #b03a3a; font-size: 14.5px; line-height: 1.6;
+}
+.form-error a { color: #b03a3a; font-weight: 700; }
 .info-stack { display: grid; gap: 16px; }
 .info-card { display: flex; gap: 16px; background: #fff; border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 22px; }
 .info-card .ii { width: 46px; height: 46px; flex: 0 0 46px; border-radius: 12px; background: var(--soft); color: var(--blue); display: flex; align-items: center; justify-content: center; }
