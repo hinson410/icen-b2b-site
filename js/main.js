@@ -81,7 +81,7 @@
     });
   });
 
-  /* ---------- Contact form (Formspree AJAX + WhatsApp redirect) ---------- */
+  /* ---------- Contact form (Formspree AJAX -> thank-you page) ---------- */
   var form = document.getElementById("inquiry-form");
   if (form) {
     var submitBtn = form.querySelector('button[type="submit"]');
