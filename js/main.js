@@ -127,13 +127,14 @@
       })
         .then(function (res) {
           if (!res.ok) throw new Error("Formspree HTTP " + res.status);
-          var waText = "Hello ICEN Medical, I just submitted an inquiry on your website.";
-          if (payload.name) waText += " Name: " + payload.name;
-          if (payload.company) waText += " | Company: " + payload.company;
-          if (payload.country) waText += " | Country: " + payload.country;
-          if (payload.product) waText += " | Product: " + payload.product;
-          if (payload.message) waText += " | Message: " + payload.message;
-          window.location.href = "https://wa.me/8618702023430?text=" + encodeURIComponent(waText);
+          if (success) success.style.display = "block";
+          var q = new URLSearchParams();
+          if (payload.name) q.set("name", payload.name);
+          if (payload.company) q.set("company", payload.company);
+          if (payload.country) q.set("country", payload.country);
+          if (payload.product) q.set("product", payload.product);
+          var qs = q.toString();
+          window.location.href = "/thank-you.html" + (qs ? "?" + qs : "");
         })
         .catch(function () {
           if (errorBox) {

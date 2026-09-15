@@ -11,7 +11,6 @@ Updated: 2026-09-09
 - resources.html — Buying guides & resources hub
 - about.html — Company profile (founded 2015, team, proof photos)
 - contact.html — Contact & inquiry form
-- product-detail.html — Product detail page prototype (excluded from search: see robots.txt)
 
 ## Content notes
 - Contact email used across the site: icen001@icenteco.com
