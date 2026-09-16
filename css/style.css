@@ -360,6 +360,9 @@ h1, h2, h3, h4 { color: var(--navy); line-height: 1.22; font-weight: 700; }
 .footer-col ul li { margin-bottom: 10px; }
 .footer-col a { color: rgba(255,255,255,.72); font-size: 14.5px; }
 .footer-col a:hover { color: #fff; }
+.footer-social { display: flex; flex-wrap: wrap; gap: 9px 18px; margin-bottom: 18px; }
+.footer-social a { color: rgba(255,255,255,.72); font-size: 13.5px; }
+.footer-social a:hover { color: #fff; }
 .footer-contact li { display: flex; gap: 10px; margin-bottom: 13px; font-size: 14.5px; align-items: flex-start; }
 .footer-contact svg { width: 17px; height: 17px; color: var(--cyan); flex: 0 0 17px; margin-top: 3px; }
 .footer-contact a { color: rgba(255,255,255,.85); }
