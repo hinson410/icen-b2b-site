@@ -493,6 +493,10 @@ h1, h2, h3, h4 { color: var(--navy); line-height: 1.22; font-weight: 700; }
 .about-lead-new p, .split p, .split-copy p { color: var(--muted); font-size: 15px; margin: 0 0 12px; }
 .about-visual-new, .split-media, .company-collage { border: 1px solid var(--line); border-radius: 26px; overflow: hidden; background: #fff; box-shadow: 0 22px 55px rgba(16, 42, 86, .10); }
 .about-visual-new img { width: 100%; height: 520px; object-fit: cover; }
+/* Video keeps its natural 4:3 frame rather than being cropped to a fixed height:
+   a controllable video must not hide content at the edges. The section centres its
+   columns, so this does not change the overall section height. */
+.about-visual-new video { display: block; width: 100%; height: auto; background: #061a37; }
 .split-media img { width: 100%; height: 520px; object-fit: cover; }
 .company-collage img { width: 100%; height: 560px; object-fit: cover; object-position: center 47%; }
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
