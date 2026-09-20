@@ -81,6 +81,9 @@ SRC_OVERRIDE = {
     'solutions/operating-room.html': 'assets/img/mindray-a9.jpg',
     'solutions/hospital-setup.html': 'assets/img/mindray-digieye680.jpg',
 }
+SRC_OVERRIDE.setdefault('brands/mindray.html', 'assets/img/mindray-resona7.jpg')
+SRC_OVERRIDE.setdefault('brands/edan.html', 'assets/img/edan-u50vet.jpg')
+
 TITLE_OVERRIDE = {
     'index.html': 'ICEN Medical Equipment',
     'resources.html': 'Medical Equipment Buying Guides',
@@ -119,6 +122,8 @@ def eyebrow_for(rel):
         return 'Buying guide'
     if rel.startswith('solutions/'):
         return 'Solution'
+    if rel.startswith('brands/'):
+        return 'Brand'
     return {
         'index.html': 'One-stop medical equipment',
         'products.html': 'Product catalogue',
