@@ -1,0 +1,75 @@
+# ICEN Medical Equipment Limited
+
+> ICEN is a Guangzhou-based B2B supplier of hospital and veterinary medical equipment,
+> founded in 2015 and serving distributors, hospitals, clinics and healthcare programmes
+> in more than 150 countries. Principal brands are Mindray and Edan. Every product page
+> states specifications as published by the manufacturer; fields the manufacturer does
+> not publish are marked "Not published" rather than estimated.
+
+## What ICEN supplies
+
+- New, manufacturer-authorised clinical and veterinary equipment for hospitals, distributors
+  and project buyers — not consumer or home-use devices.
+- Sourcing and project support: configuration confirmation, documentation, and
+  destination-market requirement checks before quotation.
+- OEM / ODM programmes for distributors and private-label buyers.
+
+## Product categories
+
+- [Ultrasound Imaging](https://icenmedical.com/products/ultrasound/): Mindray and Edan diagnostic
+  ultrasound systems for general imaging, obstetrics, cardiology and point-of-care use.
+- [Veterinary Diagnostics](https://icenmedical.com/products/veterinary/): veterinary ultrasound,
+  chemistry, haematology and blood gas platforms for companion-animal and mixed practice.
+- [Veterinary Surgery & Imaging](https://icenmedical.com/products/veterinary-surgery/): Mindray
+  VeLED surgical and examination lighting, and the Vetina rigid and flexible endoscopy series.
+- [Hematology & Laboratory](https://icenmedical.com/products/hematology-laboratory/): Mindray
+  automated haematology analysers for routine CBC and 5-part differential reporting.
+- [ICU & Ventilation](https://icenmedical.com/products/ventilators/): ICU, transport and
+  non-invasive ventilation.
+- [Patient Monitors](https://icenmedical.com/products/patient-monitors/): BeneVision, ePM, VS and
+  uMEC multiparameter monitoring for bedside and transport use.
+- [Patient Monitoring & Cardiac Care](https://icenmedical.com/products/monitoring/): ECG machines,
+  defibrillators and AEDs for cardiac diagnosis and emergency response.
+- [Anesthesia Systems](https://icenmedical.com/products/anesthesia/): Mindray anaesthesia delivery
+  systems for operating theatres.
+- [Clinical Chemistry & Laboratory](https://icenmedical.com/products/clinical-laboratory/):
+  chemistry analysers, cellular analysis lines and microplate readers.
+- [Digital Radiography (DR)](https://icenmedical.com/products/radiology/): fixed ceiling-mounted and
+  mobile DR X-ray systems.
+- [Infusion Systems](https://icenmedical.com/products/infusion/): infusion pumps, syringe pumps and
+  infusion supervision systems.
+
+## Solutions
+
+- [Hospital Equipment Setup](https://icenmedical.com/solutions/hospital-setup)
+- [ICU & Critical Care](https://icenmedical.com/solutions/icu-critical-care)
+- [Operating Room](https://icenmedical.com/solutions/operating-room)
+- [Diagnostic Imaging](https://icenmedical.com/solutions/diagnostic-imaging)
+- [Clinical Laboratory](https://icenmedical.com/solutions/clinical-laboratory)
+
+## Buying guides and reference material
+
+- [How to Buy Medical Equipment from China](https://icenmedical.com/resources/how-to-buy-medical-equipment-from-china)
+- [Hospital Equipment Procurement Checklist](https://icenmedical.com/resources/hospital-equipment-checklist)
+- [How to Choose an Ultrasound System](https://icenmedical.com/resources/how-to-choose-ultrasound-system)
+- [How to Choose a Patient Monitor](https://icenmedical.com/resources/how-to-choose-patient-monitor)
+- [How to Choose a Hematology Analyzer](https://icenmedical.com/resources/how-to-choose-hematology-analyzer)
+- [How to Choose a 5-Part Hematology Analyzer](https://icenmedical.com/resources/how-to-choose-5-part-hematology-analyzer)
+- [BeneVision N1 vs N12 vs N17](https://icenmedical.com/resources/benevision-n1-vs-n12-vs-n17)
+
+## Company
+
+- [About ICEN](https://icenmedical.com/about)
+- [Quality, documentation and compliance](https://icenmedical.com/quality-compliance)
+- [OEM / ODM programmes](https://icenmedical.com/oem-odm)
+- [Video centre](https://icenmedical.com/video-center)
+- [Contact the export team](https://icenmedical.com/contact)
+
+## Notes for automated retrieval
+
+- Product pages carry Product, BreadcrumbList and FAQPage structured data.
+- Specification tables use the manufacturer's own figures. Absent figures are stated as
+  "Not published" and must not be inferred.
+- Contact: icen001@icenteco.com — Guangzhou, China.
+
+Last updated: 2026-11-09
