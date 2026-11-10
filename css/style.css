@@ -478,7 +478,9 @@ h2[id] { scroll-margin-top: 120px; }
 .about-lead-new h2, .split h2, .split-copy h2 { color: var(--navy); font-size: clamp(30px, 3.6vw, 44px); line-height: 1.08; letter-spacing: -0.02em; margin: 8px 0 14px; }
 .about-lead-new p, .split p, .split-copy p { color: var(--muted); font-size: 15px; margin: 0 0 12px; }
 .about-visual-new, .split-media, .company-collage { border: 1px solid var(--line); border-radius: 26px; overflow: hidden; background: #fff; box-shadow: 0 22px 55px rgba(16, 42, 86, .10); }
-.about-visual-new img { width: 100%; height: 520px; object-fit: cover; }
+/* company-profile.jpg is a 509x720 portrait: a fixed 520px box with object-fit
+   cover cut roughly a quarter of the infographic away, so let it keep its ratio */
+.about-visual-new img { width: 100%; height: auto; }
 /* Video keeps its natural 4:3 frame rather than being cropped to a fixed height:
    a controllable video must not hide content at the edges. The section centres its
    columns, so this does not change the overall section height. */
@@ -525,7 +527,7 @@ h2[id] { scroll-margin-top: 120px; }
   .cta-panel { display: block; }
   .cta-panel .actions { margin-top: 16px; }
   .video-hero-copy { display: block; }
-  .about-visual-new img { height: 380px; }
+  .about-visual-new img { height: auto; }
   .split-media img { height: 380px; }
   .company-collage img { height: 420px; }
   .proof-card img { height: 320px; }
