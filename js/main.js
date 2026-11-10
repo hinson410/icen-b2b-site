@@ -146,12 +146,42 @@
     });
   }
 
-  /* ---------- Preselect product interest from query string ---------- */
+  /* ---------- Product links carry the model in data-product ----------
+     Keeping it out of the href stops 392 duplicate /contact?product=… URLs
+     from being crawled as separate pages. */
+  document.addEventListener("click", function (e) {
+    var a = e.target && e.target.closest ? e.target.closest("a[data-product]") : null;
+    if (!a) return;
+    try {
+      sessionStorage.setItem("icen_product", a.getAttribute("data-product"));
+    } catch (err) { /* storage unavailable: the link still works */ }
+  });
+
+  /* ---------- Preselect product interest ---------- */
   var params = new URLSearchParams(window.location.search);
   var product = params.get("product");
+  if (!product) {
+    try { product = sessionStorage.getItem("icen_product"); } catch (err) { product = null; }
+  }
   var interest = document.getElementById("cf-product");
   if (product && interest) {
-    interest.value = product;
+    var matchedOption = null;
+    for (var oi = 0; oi < interest.options.length; oi++) {
+      if (interest.options[oi].value.toLowerCase() === String(product).toLowerCase()) {
+        matchedOption = interest.options[oi].value;
+        break;
+      }
+    }
+    if (matchedOption) {
+      interest.value = matchedOption;
+    } else {
+      /* a model name is not a category option - put it where it is useful */
+      var msgBox = document.getElementById("cf-message");
+      if (msgBox && !msgBox.value) {
+        msgBox.value = "I would like a quotation for: " + product + ".";
+      }
+    }
+    try { sessionStorage.removeItem("icen_product"); } catch (err) { /* ignore */ }
   }
 
   /* ---------- Footer year ---------- */

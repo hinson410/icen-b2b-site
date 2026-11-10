@@ -1,5 +1,9 @@
 User-agent: *
 Allow: /
+# pretty URLs are canonical; the .html variants only 308-redirect
+Disallow: /*.html$
+# product links must not create crawlable duplicate pages
+Disallow: /*?product=
 Content-Signal: search=yes,ai-input=yes,ai-train=yes,use=reference
 
 Sitemap: https://icenmedical.com/sitemap.xml
