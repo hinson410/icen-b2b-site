@@ -14,3 +14,9 @@
 .table-wrap tbody th a{color:#1261d8;text-decoration:none}
 .table-wrap tbody th a:hover{text-decoration:underline}
 @media(max-width:640px){.table-wrap{border-radius:10px}.table-wrap thead th,.table-wrap tbody th,.table-wrap tbody td{padding:11px 13px;font-size:13.5px}}
+/* ---------- Hero eyebrow ----------
+   .page-hero sets color:#fff for the dark hero, and .seo-page-hero reuses that
+   class on a light gradient. Pages that load style.css + seo.css without
+   video.css therefore had a white, invisible eyebrow. Restore the token used
+   by video.css so the label is legible on the light hero. */
+.seo-page-hero .eyebrow{display:inline-block;color:#1769dc;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
