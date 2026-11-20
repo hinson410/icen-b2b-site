@@ -20,3 +20,6 @@
    video.css therefore had a white, invisible eyebrow. Restore the token used
    by video.css so the label is legible on the light hero. */
 .seo-page-hero .eyebrow{display:inline-block;color:#1769dc;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+/* Dense comparison tables: 9+ columns do not fit the 900px column at the
+   default padding, so allow a tighter variant instead of clipping the last column. */
+.table-wrap.cmp-compact thead th,.table-wrap.cmp-compact tbody th,.table-wrap.cmp-compact tbody td{padding:8px 9px;font-size:12.5px;line-height:1.45}

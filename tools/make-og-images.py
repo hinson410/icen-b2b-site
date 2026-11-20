@@ -67,6 +67,7 @@ SRC_OVERRIDE = {
     'quality-compliance.html': 'assets/img/mindray-bc6800.jpg',
     'contact.html': 'assets/img/mindray-a8.jpg',
     'resources.html': 'assets/img/mindray-resonai8.jpg',
+    'resources/mindray-anesthesia-system-comparison.html': 'assets/img/mindray-a9.jpg',
     'video-center.html': 'assets/img/mindray-a9.jpg',
     'resources/how-to-choose-ultrasound-system.html': 'assets/img/mindray-resonai8.jpg',
     'resources/how-to-choose-patient-monitor.html': 'assets/img/mindray-n12.jpg',
