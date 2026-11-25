@@ -1,9 +1,7 @@
-/* Self-hosted Inter, variable weight axis 400-800, latin subsets only.
-   Replaces the fonts.googleapis.com stylesheet: that one <link> sat on the
-   critical path and forced two extra origins (fonts.googleapis.com for the CSS,
-   fonts.gstatic.com for the woff2), which on mobile Slow 4G costs two full
-   DNS+TCP+TLS round trips before the first paint can happen.
-   Google serves one variable file for all weights, so this is a single 47 KB
-   request instead of five. */
-@font-face{font-family:'Inter';font-style:normal;font-weight:400 800;font-display:swap;src:url(../assets/fonts/inter-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
-@font-face{font-family:'Inter';font-style:normal;font-weight:400 800;font-display:swap;src:url(../assets/fonts/inter-latinext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+/* Self-hosted Inter, subset to the 112 glyphs this site actually renders
+   (full basic ASCII kept as a safety net), variable weight axis 400-800.
+   Subset with fonttools; kerning, ligatures and contextual alternates preserved.
+   48,256 B -> 24,556 B.
+   No unicode-range: a glyph outside the subset falls back to the next family in
+   the stack instead of rendering tofu. */
+@font-face{font-family:'Inter';font-style:normal;font-weight:400 800;font-display:swap;src:url(../assets/fonts/inter-subset.woff2) format('woff2');}
