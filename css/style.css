@@ -423,16 +423,17 @@ h2[id] { scroll-margin-top: 120px; }
 .slider-btn.prev { left: 12px; }
 .slider-btn.next { right: 12px; }
 .slider-dots {
-  position: absolute; left: 14px; bottom: 14px; display: flex; gap: 7px; z-index: 3;
+  position: absolute; left: 6px; bottom: 6px; display: flex; gap: 2px; z-index: 3;
 }
 .slider-dots button {
-  width: 9px; height: 9px; border-radius: 999px; border: none; cursor: pointer;
-  background: rgba(255,255,255,.55); padding: 0; transition: all .25s;
+  width: 24px; height: 24px; border: none; cursor: pointer;
+  background: none; padding: 0; position: relative;
 }
-.slider-dots button.active { background: var(--cyan); width: 22px; }
-/* Keep the 9px dot but give it a 25px touch target. */
-.slider-dots button { position: relative; }
-.slider-dots button::before { content: ""; position: absolute; inset: -8px; border-radius: 999px; }
+.slider-dots button::before {
+  content: ""; position: absolute; inset: 8px; border-radius: 999px;
+  background: rgba(255,255,255,.55); transition: all .25s;
+}
+.slider-dots button.active::before { background: var(--cyan); inset: 8px 1px; }
 
 /* ---------- Clinical systems section ---------- */
 .clinical-band { background: linear-gradient(180deg, #fff, var(--soft)); }
