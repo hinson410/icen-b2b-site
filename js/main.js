@@ -222,6 +222,7 @@
       dot.classList.toggle("active", i === index);
     });
   }
+
   function next() { go(index + 1); }
   function restart() {
     if (timer) clearInterval(timer);
@@ -234,7 +235,8 @@
   slider.addEventListener("mouseenter", function () { if (timer) clearInterval(timer); });
   slider.addEventListener("mouseleave", restart);
   restart();
-})();
+
+  })();
 
 /* ICEN V5 product search */
 document.addEventListener('DOMContentLoaded', function(){
