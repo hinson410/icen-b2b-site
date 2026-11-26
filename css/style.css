@@ -410,6 +410,9 @@ h2[id] { scroll-margin-top: 120px; }
 }
 .slider-track { display: flex; transition: transform 0.55s cubic-bezier(.4,0,.2,1); }
 .slider-slide { position: relative; min-width: 100%; }
+/* <picture> must not create a box, otherwise the inner img's width:100% has no
+   containing block width to resolve against on the first layout pass. */
+.slider-slide picture { display: contents; }
 .slider-slide img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block; }
 .slider-btn {
   position: absolute; top: 50%; transform: translateY(-50%);

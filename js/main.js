@@ -236,6 +236,24 @@
   slider.addEventListener("mouseleave", restart);
   restart();
 
+  /* Slides 2..10 ship a 1x1 placeholder: the track is a horizontal flex row, so
+     loading="lazy" was fetching all ten (~330 KB) before the first paint. Swap
+     the real sources in once the page has loaded, well before autoplay reaches
+     slide 2, so nothing pops in on screen. /* warm-deferred-slides */
+  function warmSlides() {
+    for (var i = 0; i < slides.length; i++) {
+      var im = slides[i].querySelector("img[data-src]");
+      if (!im) continue;
+      im.src = im.getAttribute("data-src");
+      im.removeAttribute("data-src");
+    }
+  }
+  if (document.readyState === "complete") {
+    setTimeout(warmSlides, 200);
+  } else {
+    window.addEventListener("load", function () { setTimeout(warmSlides, 200); });
+  }
+
   })();
 
 /* ICEN V5 product search */
